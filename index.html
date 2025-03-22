@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming TV Indonesia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(40, 40, 40, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: 'Verdana', sans-serif;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out, background 0.3s;
+            height: 60px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .link:hover {
+            background: #555;
+            transform: scale(1.1);
+        }
+        .link img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        .video-container {
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            background: black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: gray;
+        }
+        .credit {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+    <script>
+        function playStream(url) {
+            document.getElementById('player').src = url;
+            document.getElementById('placeholder').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Streaming TV Indonesia</h2>
+
+        <div class="grid">
+            <a class="link" onclick="playStream('https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGcmN0aSUyRmluZXdzaWQmaGVpZ2h0PTEwMCUyNSZ3aWR0aD0xMDAlMjU=')"><img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/RCTI_logo_2015.svg" alt="RCTI"></a>
+            <a class="link" onclick="playStream('https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGZ3R2JTJGaW5ld3NpZCZoZWlnaHQ9MTAwJTI1JndpZHRoPTEwMCUyNQ==')"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/GTV_%282017%29.svg" alt="GTV"></a>
+            <a class="link" onclick="playStream('https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGbW5jdHYlMkZpbmV3c2lkJmhlaWdodD0xMDAlMjUmd2lkdGg9MTAwJTI1')"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/MNCTV_MNC-Group.svg" alt="MNCTV"></a>
+            <a class="link" onclick="playStream('https://sindikasi.inews.id/embed/video/YWdlbnQ9ZGVza3RvcCZ1cmw9aHR0cHMlM0ElMkYlMkZlbWJlZC5yY3RpcGx1cy5jb20lMkZsaXZlJTJGaW5ld3MlMkZpbmV3c2lkJmhlaWdodD0xMDAlMjUmd2lkdGg9MTAwJTI1')"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/INews.svg" alt="INEWS"></a>
+            <a class="link" onclick="playStream('https://20.detik.com/watch/livestreaming-trans7')"><img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Logo_Trans7.png" alt="Trans7"></a>
+            <a class="link" onclick="playStream('https://20.detik.com/watch/livestreaming-transtv')"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Logo_Trans_TV.png"></a>
+            <a class="link" onclick="playStream('https://www.vidio.com/live/204-sctv-tv-stream/embed?autoplay=true&player_only=true&live_chat=false&mute=false&')"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/SCTV_Logo.svg" alt="SCTV"></a>
+            <a class="link" onclick="playStream('https://www.dailymotion.com/embed/video/k236ofBIxajxDiti8CY?autoPlay=1&queue-enable=false')"><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/MetroTV_2000.svg" alt="MetroTV"></a>
+            <a class="link" onclick="playStream('https://www.dailymotion.com/embed/video/k46igSmSMGBIiWsXtWk?autoplay=1')"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Kompas_TV_%282016%29_logo.svg" alt="KompasTV"></a>
+        </div>
+
+        <div class="video-container">
+            <div class="placeholder" id="placeholder">Mau nonton apa bang?</div>
+            <iframe id="player" src="" allowfullscreen></iframe>
+        </div>
+        
+        <div class="credit">by mhdhasanr</div>
+    </div>
+</body>
+</html>
